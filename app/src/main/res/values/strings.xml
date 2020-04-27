@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">wartacom</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="value_home">Home</string>
+    <string name="value_gallery">Gallery</string>
+    <string name="value_notification">Notifications</string>
+    <string name="value_profil">Profil</string>
+    <string name="judul_berita">Judul Berita</string>
+    <string name="summary">Ringkasan</string>
+    <string name="src">Source</string>
+</resources>
