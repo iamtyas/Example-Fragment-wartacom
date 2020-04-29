@@ -6,11 +6,16 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yastyas.wartacom.gallery.GalleryFragment
 import com.yastyas.wartacom.home.HomeFragment
+import com.yastyas.wartacom.notification.NotificationFragment
+import com.yastyas.wartacom.profil.ProfilFragment
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var homeFragment: HomeFragment
-    lateinit var galleryFragment: GalleryFragment
+    private lateinit var homeFragment: HomeFragment
+    private lateinit var galleryFragment: GalleryFragment
+    private lateinit var notificationFragment: NotificationFragment
+    private lateinit var profilFragment: ProfilFragment
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +45,22 @@ class MainActivity : AppCompatActivity() {
                     supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.frame_layout, galleryFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+                }
+                R.id.nav_notif -> {
+                    notificationFragment = NotificationFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, notificationFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+                }
+                R.id.nav_profil -> {
+                    profilFragment = ProfilFragment()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.frame_layout, profilFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
                 }

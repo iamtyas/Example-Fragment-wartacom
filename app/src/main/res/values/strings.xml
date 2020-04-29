@@ -10,4 +10,25 @@
     <string name="judul_berita">Judul Berita</string>
     <string name="summary">Ringkasan</string>
     <string name="src">Source</string>
+    <string name="nama">TRI PUJI NING TYAS</string>
+    <string name="hello">Hello! I am</string>
+    <string name="ringkasan">Student of Software Engineering Major in 6th grade (3rd years) on Universitas PGRI Semarang.</string>
+    <string name="aboutme">About Me</string>
+    <string name="tempat_lahir">Place of Birth</string>
+    <string name="tanggal_lahir">Day of Birth</string>
+    <string name="value_tempat_lahir">Kendal</string>
+    <string name="value_tanggal_lahir">May, 28th 1998</string>
+    <string name="alamat">Address</string>
+    <string name="value_alamat">Simbang RT 04 RW 05 Bebengan - Boja, Kendal</string>
+    <string name="nomorwa">Contact Person</string>
+    <string name="value_nomorwa">+62 81326002385</string>
+    <string name="award">Honors</string>
+    <string name="tahun">2019</string>
+    <string name="value_web">Junior Web Developer</string>
+    <string name="value_cyber">Junior Cyber Security</string>
+    <string name="value_mobile">Junior Mobile Programming</string>
+    <string name="value_dsc">Lead of Developer Student Club Chapter Universitas PGRI Semarang</string>
+    <string name="npm">17670011</string>
+    <string name="uts">UTS</string>
+    <string name="oleh">Dibuat oleh:</string>
 </resources>

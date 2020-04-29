@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextProfil"
+                android:paddingTop="@dimen/padding"
+                android:text="@string/hello" />
+
+            <TextView
+                style="@style/TextProfil.Nama"
+                android:text="@string/nama" />
+
+            <TextView
+                style="@style/TextProfil"
+                android:text="@string/ringkasan" />
+
+            <TextView
+                style="@style/TextProfil.Gray"
+                android:paddingTop="@dimen/padding"
+                android:text="@string/aboutme" />
+
+            <TableLayout style="@style/TextProfil">
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/tempat_lahir" />
+
+                    <TextView
+                        style="@style/TableColDua"
+                        android:text="@string/value_tempat_lahir" />
+                </TableRow>
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/tanggal_lahir" />
+
+                    <TextView
+                        style="@style/TableColDua"
+                        android:text="@string/value_tanggal_lahir" />
+                </TableRow>
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/alamat" />
+
+                    <TextView
+                        style="@style/TableColDua"
+                        android:text="@string/value_alamat" />
+                </TableRow>
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/nomorwa" />
+
+                    <TextView
+                        android:id="@+id/tv_cp"
+                        style="@style/TableColDua"
+                        android:text="@string/value_nomorwa" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                style="@style/TextProfil.Gray"
+                android:paddingTop="@dimen/padding"
+                android:text="@string/award" />
+
+            <TableLayout style="@style/TextProfil">
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/tahun" />
+
+                    <TextView
+                        style="@style/TableColDua"
+                        android:text="@string/value_cyber" />
+                </TableRow>
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/tahun" />
+
+                    <TextView
+                        style="@style/TableColDua"
+                        android:text="@string/value_web" />
+                </TableRow>
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/tahun" />
+
+                    <TextView
+                        style="@style/TableColDua"
+                        android:text="@string/value_mobile" />
+                </TableRow>
+
+
+                <TableRow style="@style/TableRow">
+
+                    <TextView
+                        style="@style/TableColSatu"
+                        android:text="@string/tahun" />
+
+                    <TextView
+                        style="@style/TableColDua"
+                        android:text="@string/value_dsc" />
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TextView
+                style="@style/TextProfil.Gray"
+                android:paddingTop="@dimen/padding"
+                android:text="@string/oleh" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin"
+                android:padding="@dimen/padding">
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="@dimen/logo"
+                    android:layout_height="@dimen/logo"
+                    android:layout_marginEnd="@dimen/row_margin"
+                    android:layout_marginRight="@dimen/row_margin"
+                    android:src="@drawable/logoupgris" />
+
+                <TextView
+                    android:id="@+id/tv_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/row_margin"
+                    android:layout_toRightOf="@id/img_logo"
+                    android:text="@string/nama" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_nama"
+                    android:layout_toRightOf="@id/img_logo"
+                    android:text="@string/npm" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

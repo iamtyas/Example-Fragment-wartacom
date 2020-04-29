@@ -1,6 +1,5 @@
 package com.yastyas.wartacom.home
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,34 +11,36 @@ import com.bumptech.glide.request.RequestOptions
 import com.yastyas.wartacom.R
 import com.yastyas.wartacom.modeldata.Berita
 
-class HomeAdapter(val listBerita: ArrayList<Berita>) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>(){
+class HomeAdapter (val listBerita: ArrayList<Berita>) :
+    RecyclerView.Adapter<HomeAdapter.ListCardViewHolder>(){
 
-//    private lateinit var mContext: Context
-//    private var listBerita: ArrayList<Berita> = arrayListOf()
+    private lateinit var onItemClickCallback: OnItemClickCallback
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
 
-//    final fun HomeAdapter(ArrayList<Berita> list){
-//        this.mContext = mContext;
-//        this.listBerita = list
-//    }
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Berita)
+    }
 
-    inner class HomeViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ListCardViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvJudul: TextView = itemView.findViewById(R.id.tv_judul)
         var tvRingkasan: TextView = itemView.findViewById(R.id.tv_ringkasan)
         var tvSrc: TextView = itemView.findViewById(R.id.tv_src)
         var imgFoto: ImageView = itemView.findViewById(R.id.iv_img)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListCardViewHolder {
         val view: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_home, parent, false)
-        return HomeViewHolder(view)
+        return ListCardViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return listBerita.size
+       return listBerita.size
     }
 
-    override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ListCardViewHolder, position: Int) {
         val berita = listBerita[position]
         Glide.with(holder.itemView.context)
             .load(berita.img)
